@@ -1,13 +1,11 @@
-%define module sniffio
-
 Summary:	Sniff out which async library your code is running under 
-Name:		python-%{module}
-Version:	1.2.0
+Name:		python-sniffio
+Version:	1.3.0
 Release:	1
 License:	MIT or Apache
 Group:		Development/Python
-Url:		https://github.com/python-trio/sniffio/%{module}
-Source:		https://files.pythonhosted.org/packages/source/s/%{module}/%{module}-%{version}.tar.gz
+Url:		https://github.com/python-trio/sniffio/sniffio
+Source:		https://files.pythonhosted.org/packages/source/s/sniffio/sniffio-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python3dist(setuptools)
@@ -28,13 +26,13 @@ library your code is running under.
 %files
 %license LICENSE
 %doc README.rst
-%{python_sitelib}/%{module}/
-%{python_sitelib}/%{module}-%{version}-py%{pyver}.egg-info/
+%{python_sitelib}/sniffio/
+%{python_sitelib}/sniffio*-info/
 
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -n %{module}-%{version}
+%autosetup -n sniffio-%{version}
 
 %build
 %py_build
