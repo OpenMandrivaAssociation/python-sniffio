@@ -7,8 +7,10 @@ Group:		Development/Python
 Url:		https://github.com/python-trio/sniffio/sniffio
 Source:		https://files.pythonhosted.org/packages/source/s/sniffio/sniffio-%{version}.tar.gz
 
-BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python3(pip)
 BuildRequires:	python3dist(setuptools)
+BuildRequires:	python3dist(wheel)
 # test
 BuildRequires:	python3dist(curio)
 
@@ -27,7 +29,7 @@ library your code is running under.
 %license LICENSE
 %doc README.rst
 %{python_sitelib}/sniffio/
-%{python_sitelib}/sniffio*-info/
+%{python_sitelib}/sniffio-*.*-info/
 
 #----------------------------------------------------------------------------
 
