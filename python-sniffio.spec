@@ -8,7 +8,7 @@ Url:		https://github.com/python-trio/sniffio/sniffio
 Source:		https://files.pythonhosted.org/packages/source/s/sniffio/sniffio-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python3(pip)
+BuildRequires:	python3dist(pip)
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	python3dist(wheel)
 # test
