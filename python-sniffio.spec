@@ -1,7 +1,7 @@
 Summary:	Sniff out which async library your code is running under 
 Name:		python-sniffio
 Version:	1.3.0
-Release:	1
+Release:	2
 License:	MIT or Apache
 Group:		Development/Python
 Url:		https://github.com/python-trio/sniffio/sniffio
