@@ -1,4 +1,4 @@
-Summary:	Sniff out which async library your code is running under 
+Summary:	Sniff out which async library your code is running under
 Name:		python-sniffio
 Version:	1.3.1
 Release:	3
@@ -8,11 +8,10 @@ Url:		https://github.com/python-trio/sniffio/sniffio
 Source:		https://files.pythonhosted.org/packages/source/s/sniffio/sniffio-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(pip)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(wheel)
-# test
-BuildRequires:	python3dist(curio)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(setuptools-scm)
+BuildRequires:	python%{pyver}dist(wheel)
 
 BuildArch:	noarch
 
@@ -37,6 +36,8 @@ library your code is running under.
 %autosetup -n sniffio-%{version}
 
 %build
+# The sdist is not a git checkout, so setuptools_scm needs the version.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %py_build
 
 %install
